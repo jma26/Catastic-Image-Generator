@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $color-black: #161616;
 $color-white: #fff;
 $color-gray: #565553;
@@ -39,6 +41,8 @@ p {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	padding: 1.5rem;
+	text-align: center;
 }
 
 // Cat
@@ -271,7 +275,7 @@ p {
 		font-size: 1rem;
 		transition: background-color 0.3s ease;
 		&:active, &:focus, &:hover {
-			background-color: scale-color($color-black, $lightness: 10%);
+			background-color: color.scale($color-black, $lightness: 10%);
 		}
 	}
 }
