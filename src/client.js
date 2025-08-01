@@ -37,9 +37,11 @@ function setImage({ mimetype, tags, url }) {
   imageElement.src = url;
   imageElement.mimetype = mimetype;
   imageElement.alt = tags.join(' ');
+  imageElement.onload = () => {
+    appendImageToModal(imageElement);
+    toggleModal();
+  }
 
-  appendImageToModal(imageElement);
-  toggleModal();
 }
 
 function appendImageToModal(imageElement) {
