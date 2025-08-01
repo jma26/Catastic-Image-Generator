@@ -1,11 +1,13 @@
 const closeDialogButton = document.getElementsByClassName('data-dialog__close-button')[0];
 const generateImageButton = document.getElementsByClassName('hero-content__button')[0];
+const loaderContainer = document.getElementsByClassName('data-dialog__loader-container')[0];
 
 generateImageButton.addEventListener('click', () => {
   fetchImage();
 });
 
 closeDialogButton.addEventListener('click', () => {
+  loaderContainer.classList.toggle('not-loading');
   document.body.focus();
   toggleModal();
 });
@@ -39,9 +41,10 @@ function setImage({ mimetype, tags, url }) {
   imageElement.alt = tags.join(' ');
   imageElement.onload = () => {
     appendImageToModal(imageElement);
-    toggleModal();
+    loaderContainer.classList.toggle('not-loading');
   }
-
+  
+  toggleModal();
 }
 
 function appendImageToModal(imageElement) {
