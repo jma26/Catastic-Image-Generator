@@ -12,6 +12,14 @@ closeDialogButton.addEventListener('click', () => {
   toggleModal();
 });
 
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    loaderContainer.classList.toggle('not-loading');
+    document.body.focus();
+    toggleModal();
+  }
+});
+
 async function fetchImage() {
   console.log('Fetching image...');
   fetch(`${process.env.API_URL}`)
