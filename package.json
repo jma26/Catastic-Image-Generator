@@ -3,12 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "source": "src/index.html",
+  "homepage": "https://jma26.github.io/Catastic-Memes-Generator/",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build src/index.html --public-url ./",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.15.4",
+    "gh-pages": "^6.3.0",
     "parcel": "^2.14.0"
   }
 }
