@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "source": "src/index.html",
-  "homepage": "https://jma26.github.io/Catastic-Memes-Generator/",
+  "homepage": "https://jma26.github.io/Catastic-Image-Generator/",
   "scripts": {
     "start": "parcel",
     "build": "parcel build src/index.html --public-url ./",
