@@ -26,12 +26,14 @@ main {
 }
 
 h1 {
+	color: $color-black;
 	font-size: 3rem;
 	font-weight: 700;
 	line-height: 1.2;
 }
 
 p {
+	color: $color-black;
 	font-weight: 400;
 	font-size: 1rem;
 	line-height: 1.2;
